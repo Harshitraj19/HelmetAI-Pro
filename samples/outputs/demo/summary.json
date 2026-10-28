@@ -1,0 +1,348 @@
+{
+  "models": [
+    "helmet_unified.onnx",
+    "coco_motorcycle_n.onnx"
+  ],
+  "images": [
+    {
+      "file": "122.jpeg",
+      "latency_ms": 366,
+      "scene": "normal",
+      "detections": {
+        "person": 5,
+        "motorcycle": 4,
+        "helmet": 4,
+        "head": 1
+      },
+      "vehicles": [
+        {
+          "track_id": 1,
+          "riders": 1,
+          "helmets": 1,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            0,
+            137,
+            154,
+            369
+          ]
+        },
+        {
+          "track_id": 2,
+          "riders": 1,
+          "helmets": 0,
+          "no_helmet": 1,
+          "violations": [
+            "NO_HELMET"
+          ],
+          "box": [
+            224,
+            149,
+            472,
+            443
+          ]
+        },
+        {
+          "track_id": 3,
+          "riders": 2,
+          "helmets": 2,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            500,
+            75,
+            718,
+            336
+          ]
+        },
+        {
+          "track_id": 4,
+          "riders": 0,
+          "helmets": 0,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            462,
+            90,
+            548,
+            292
+          ]
+        }
+      ],
+      "violations": [
+        {
+          "id": 1,
+          "violation_list": [
+            "NO_HELMET"
+          ],
+          "plate": null,
+          "severity": 40
+        }
+      ]
+    },
+    {
+      "file": "india_1.jpg",
+      "latency_ms": 223,
+      "scene": "normal",
+      "detections": {
+        "person": 5,
+        "helmet": 1,
+        "head": 2
+      },
+      "vehicles": [],
+      "violations": []
+    },
+    {
+      "file": "motorcycle_demo_3.jpg",
+      "latency_ms": 206,
+      "scene": "normal",
+      "detections": {
+        "person": 1,
+        "head": 1
+      },
+      "vehicles": [],
+      "violations": []
+    },
+    {
+      "file": "riders_1.jpg",
+      "latency_ms": 255,
+      "scene": "normal",
+      "detections": {
+        "helmet": 4,
+        "person": 4,
+        "motorcycle": 3
+      },
+      "vehicles": [
+        {
+          "track_id": 1,
+          "riders": 2,
+          "helmets": 2,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            221,
+            118,
+            442,
+            415
+          ]
+        },
+        {
+          "track_id": 2,
+          "riders": 1,
+          "helmets": 1,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            436,
+            134,
+            626,
+            401
+          ]
+        },
+        {
+          "track_id": 3,
+          "riders": 1,
+          "helmets": 1,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            72,
+            104,
+            257,
+            401
+          ]
+        }
+      ],
+      "violations": []
+    },
+    {
+      "file": "riders_2.jpg",
+      "latency_ms": 207,
+      "scene": "normal",
+      "detections": {
+        "person": 3,
+        "helmet": 2
+      },
+      "vehicles": [],
+      "violations": []
+    },
+    {
+      "file": "riders_3.jpg",
+      "latency_ms": 198,
+      "scene": "normal",
+      "detections": {
+        "person": 8,
+        "helmet": 8
+      },
+      "vehicles": [],
+      "violations": []
+    },
+    {
+      "file": "riders_4.jpg",
+      "latency_ms": 195,
+      "scene": "normal",
+      "detections": {
+        "helmet": 2,
+        "person": 3,
+        "motorcycle": 2,
+        "license_plate": 1
+      },
+      "vehicles": [
+        {
+          "track_id": 1,
+          "riders": 2,
+          "helmets": 2,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            161,
+            197,
+            660,
+            483
+          ]
+        },
+        {
+          "track_id": 2,
+          "riders": 0,
+          "helmets": 0,
+          "no_helmet": 0,
+          "violations": [],
+          "box": [
+            614,
+            80,
+            702,
+            157
+          ]
+        }
+      ],
+      "violations": []
+    },
+    {
+      "file": "riders_6.jpg",
+      "latency_ms": 192,
+      "scene": "normal",
+      "detections": {
+        "motorcycle": 1,
+        "head": 1,
+        "person": 1
+      },
+      "vehicles": [
+        {
+          "track_id": 1,
+          "riders": 1,
+          "helmets": 0,
+          "no_helmet": 1,
+          "violations": [
+            "NO_HELMET"
+          ],
+          "box": [
+            13,
+            100,
+            204,
+            344
+          ]
+        }
+      ],
+      "violations": [
+        {
+          "id": 4,
+          "violation_list": [
+            "NO_HELMET"
+          ],
+          "plate": null,
+          "severity": 40
+        }
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "file": "123.mp4",
+      "frames": 150,
+      "unique_motorcycles": 3,
+      "unique_riders": 3,
+      "riders_with_helmet": 2,
+      "violating_vehicles": 1,
+      "violations_recorded": 1,
+      "compliance_rate": 66.7,
+      "fps": 5.3,
+      "scenes": {
+        "normal": 150
+      },
+      "wall_seconds": 29.8
+    },
+    {
+      "file": "125.mp4",
+      "frames": 144,
+      "unique_motorcycles": 8,
+      "unique_riders": 5,
+      "riders_with_helmet": 5,
+      "violating_vehicles": 0,
+      "violations_recorded": 0,
+      "compliance_rate": 100.0,
+      "fps": 4.8,
+      "scenes": {
+        "normal": 138,
+        "blurry": 6
+      },
+      "wall_seconds": 36.7
+    },
+    {
+      "file": "126.mp4",
+      "frames": 150,
+      "unique_motorcycles": 1,
+      "unique_riders": 3,
+      "riders_with_helmet": 3,
+      "violating_vehicles": 1,
+      "violations_recorded": 1,
+      "compliance_rate": 100.0,
+      "fps": 4.5,
+      "scenes": {
+        "normal": 150
+      },
+      "wall_seconds": 37.8
+    },
+    {
+      "file": "city.mp4",
+      "frames": 150,
+      "unique_motorcycles": 9,
+      "unique_riders": 7,
+      "riders_with_helmet": 7,
+      "violating_vehicles": 0,
+      "violations_recorded": 0,
+      "compliance_rate": 100.0,
+      "fps": 4.4,
+      "scenes": {
+        "normal": 141,
+        "blurry": 7,
+        "night": 2
+      },
+      "wall_seconds": 35.5
+    },
+    {
+      "file": "veo3_construction.mp4",
+      "frames": 135,
+      "unique_motorcycles": 0,
+      "unique_riders": 0,
+      "riders_with_helmet": 0,
+      "violating_vehicles": 0,
+      "violations_recorded": 0,
+      "compliance_rate": null,
+      "fps": 4.8,
+      "scenes": {
+        "low_contrast": 42,
+        "normal": 81,
+        "blurry": 12
+      },
+      "wall_seconds": 27.7
+    }
+  ],
+  "violations_total": 4,
+  "plates_read": [],
+  "chain": {
+    "valid": true,
+    "checked": 4,
+    "head": "6d431fe04b2e923e12214933426e20ea13480e6bd8734d2392b1897e1fb7557a"
+  }
+}

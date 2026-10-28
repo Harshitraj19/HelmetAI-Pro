@@ -1,0 +1,21 @@
+# secrets
+.env
+backend/.env
+# python
+__pycache__/
+*.pyc
+.venv/
+# node
+node_modules/
+frontend/dist/
+# data & runs (rebuilt by training/)
+datasets/
+runs/
+data/
+*.cache
+# large weights are fetched/trained; keep teacher models + final unified model
+yolo11*.pt
+yolov8*.pt
+
+# local tool settings
+.claude/

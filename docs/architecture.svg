@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#64748b"/></marker>
+    <style>
+      .box{rx:10;stroke-width:1.5}
+      .t{font-size:14px;font-weight:700;fill:#0f172a}
+      .s{font-size:11px;fill:#475569}
+      .tag{font-size:10px;font-weight:700}
+      .ln{stroke:#64748b;stroke-width:1.6;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#ffffff"/>
+  <text x="600" y="32" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">HelmetAI-Pro — processing pipeline</text>
+
+  <!-- inputs -->
+  <rect class="box" x="20" y="70" width="150" height="150" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="t" x="95" y="96" text-anchor="middle">Inputs</text>
+  <text class="s" x="95" y="120" text-anchor="middle">Image upload</text>
+  <text class="s" x="95" y="138" text-anchor="middle">Video upload</text>
+  <text class="s" x="95" y="156" text-anchor="middle">Webcam / RTSP CCTV</text>
+  <text class="s" x="95" y="174" text-anchor="middle">YouTube stream</text>
+  <text class="s" x="95" y="192" text-anchor="middle">(base project)</text>
+
+  <!-- row 1 -->
+  <rect class="box" x="200" y="70" width="170" height="150" fill="#ecfeff" stroke="#06b6d4"/>
+  <text class="t" x="285" y="96" text-anchor="middle">Adaptive DIP</text>
+  <text class="t" x="285" y="114" text-anchor="middle">enhancement</text>
+  <text class="s" x="285" y="138" text-anchor="middle">night: γ + bilateral + CLAHE</text>
+  <text class="s" x="285" y="155" text-anchor="middle">fog: dark-channel dehaze</text>
+  <text class="s" x="285" y="172" text-anchor="middle">low contrast: CLAHE</text>
+  <text class="s" x="285" y="189" text-anchor="middle">motion blur: unsharp mask</text>
+  <text class="tag" x="285" y="210" text-anchor="middle" fill="#0891b2">NOVELTY 3</text>
+
+  <rect class="box" x="400" y="70" width="170" height="150" fill="#eff6ff" stroke="#3b82f6"/>
+  <text class="t" x="485" y="96" text-anchor="middle">Detector</text>
+  <text class="s" x="485" y="120" text-anchor="middle">YOLO11 unified 5-class</text>
+  <text class="s" x="485" y="137" text-anchor="middle">helmet · head · motorcycle</text>
+  <text class="s" x="485" y="154" text-anchor="middle">plate · hard-hat</text>
+  <text class="s" x="485" y="171" text-anchor="middle">.pt / ONNX / Roboflow</text>
+  <text class="s" x="485" y="188" text-anchor="middle">ensemble + per-class conf</text>
+  <text class="tag" x="485" y="210" text-anchor="middle" fill="#2563eb">BASE + PPE + SIDDHESH</text>
+
+  <rect class="box" x="600" y="70" width="170" height="150" fill="#eff6ff" stroke="#3b82f6"/>
+  <text class="t" x="685" y="96" text-anchor="middle">Motorcycle tracker</text>
+  <text class="s" x="685" y="120" text-anchor="middle">IoU + centre distance</text>
+  <text class="s" x="685" y="137" text-anchor="middle">persistent IDs</text>
+  <text class="s" x="685" y="154" text-anchor="middle">edge clean-up</text>
+  <text class="s" x="685" y="171" text-anchor="middle">speed estimate</text>
+  <text class="tag" x="685" y="210" text-anchor="middle" fill="#2563eb">FROM PPE REPO</text>
+
+  <rect class="box" x="800" y="70" width="190" height="150" fill="#fef2f2" stroke="#ef4444"/>
+  <text class="t" x="895" y="96" text-anchor="middle">Rider rule engine</text>
+  <text class="s" x="895" y="120" text-anchor="middle">rider zone + depth filter</text>
+  <text class="s" x="895" y="137" text-anchor="middle">NO_HELMET · hard-hat</text>
+  <text class="s" x="895" y="154" text-anchor="middle">HELMET_NOT_WORN (carried)</text>
+  <text class="s" x="895" y="171" text-anchor="middle">TRIPLE_RIDING</text>
+  <text class="s" x="895" y="188" text-anchor="middle">7-frame majority vote</text>
+  <text class="tag" x="895" y="210" text-anchor="middle" fill="#dc2626">NOVELTIES 1 + 2</text>
+
+  <rect class="box" x="1020" y="70" width="160" height="150" fill="#fefce8" stroke="#eab308"/>
+  <text class="t" x="1100" y="96" text-anchor="middle">Plate fusion OCR</text>
+  <text class="s" x="1100" y="120" text-anchor="middle">sharpest crops / track</text>
+  <text class="s" x="1100" y="137" text-anchor="middle">plate refine + CC filter</text>
+  <text class="s" x="1100" y="154" text-anchor="middle">Tesseract multi-scale</text>
+  <text class="s" x="1100" y="171" text-anchor="middle">Indian grammar repair</text>
+  <text class="s" x="1100" y="188" text-anchor="middle">char vote across frames</text>
+  <text class="tag" x="1100" y="210" text-anchor="middle" fill="#a16207">NOVELTY 4</text>
+
+  <path class="ln" d="M170 145H198"/><path class="ln" d="M370 145H398"/><path class="ln" d="M570 145H598"/>
+  <path class="ln" d="M770 145H798"/><path class="ln" d="M990 145H1018"/>
+  <path class="ln" d="M1100 220V270H1010"/>
+
+  <!-- row 2 -->
+  <rect class="box" x="830" y="250" width="180" height="120" fill="#f0fdf4" stroke="#22c55e"/>
+  <text class="t" x="920" y="276" text-anchor="middle">Evidence store</text>
+  <text class="s" x="920" y="298" text-anchor="middle">frame · bike · plate crops</text>
+  <text class="s" x="920" y="315" text-anchor="middle">SHA-256 record hash</text>
+  <text class="s" x="920" y="332" text-anchor="middle">hash chain + tamper check</text>
+  <text class="tag" x="920" y="356" text-anchor="middle" fill="#16a34a">NOVELTY 5</text>
+
+  <rect class="box" x="620" y="250" width="180" height="120" fill="#f0fdf4" stroke="#22c55e"/>
+  <text class="t" x="710" y="276" text-anchor="middle">e-Challan + severity</text>
+  <text class="s" x="710" y="298" text-anchor="middle">PDF: offences, fines, QR</text>
+  <text class="s" x="710" y="315" text-anchor="middle">risk score 0-100</text>
+  <text class="s" x="710" y="332" text-anchor="middle">repeat-offender bonus</text>
+  <text class="tag" x="710" y="356" text-anchor="middle" fill="#16a34a">NOVELTY 5</text>
+
+  <rect class="box" x="410" y="250" width="180" height="120" fill="#faf5ff" stroke="#a855f7"/>
+  <text class="t" x="500" y="276" text-anchor="middle">Privacy filter</text>
+  <text class="s" x="500" y="298" text-anchor="middle">blur compliant riders,</text>
+  <text class="s" x="500" y="315" text-anchor="middle">pedestrians and their plates</text>
+  <text class="s" x="500" y="332" text-anchor="middle">violator stays identifiable</text>
+  <text class="tag" x="500" y="356" text-anchor="middle" fill="#9333ea">NOVELTY 6</text>
+
+  <rect class="box" x="200" y="250" width="180" height="120" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text class="t" x="290" y="276" text-anchor="middle">Outputs</text>
+  <text class="s" x="290" y="298" text-anchor="middle">annotated MJPEG / MP4</text>
+  <text class="s" x="290" y="315" text-anchor="middle">WebSocket alerts + alarm</text>
+  <text class="s" x="290" y="332" text-anchor="middle">SQLite history & stats</text>
+  <text class="tag" x="290" y="356" text-anchor="middle" fill="#475569">BASE + KRISHARUL</text>
+
+  <path class="ln" d="M830 310H802"/><path class="ln" d="M620 310H592"/><path class="ln" d="M410 310H382"/>
+
+  <!-- UI row -->
+  <rect class="box" x="20" y="410" width="1160" height="120" fill="#0f172a" stroke="#0f172a"/>
+  <text x="600" y="440" text-anchor="middle" font-size="15" font-weight="700" fill="#f8fafc">React dashboard (FastAPI REST + WebSocket)</text>
+  <text x="600" y="468" text-anchor="middle" font-size="12" fill="#cbd5e1">Dashboard · Image · Video · Live stream · Violations &amp; e-Challan · Enhancement Lab · Model &amp; Training · History · Settings</text>
+  <text x="600" y="494" text-anchor="middle" font-size="12" fill="#cbd5e1">Training: merge 2 datasets → teacher pseudo-labels (DIP helmet model + COCO) → student R1 → student pseudo-labels → final → ONNX</text>
+  <path class="ln" d="M290 370V408"/>
+</svg>

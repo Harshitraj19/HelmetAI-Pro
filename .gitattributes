@@ -1,0 +1,11 @@
+# normalise source files, never touch binaries
+* text=auto
+*.sh text eol=lf
+*.pdf binary
+*.onnx binary
+*.pt binary
+*.mp4 binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.db binary

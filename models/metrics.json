@@ -1,0 +1,92 @@
+{
+  "split": "test",
+  "profile": "cpu",
+  "imgsz": 416,
+  "mAP50": 0.5833,
+  "mAP50_95": 0.3439,
+  "precision": 0.6926,
+  "recall": 0.5587,
+  "per_class": {
+    "helmet": {
+      "precision": 0.5983,
+      "recall": 0.4764,
+      "mAP50": 0.4938,
+      "mAP50_95": 0.2704
+    },
+    "head": {
+      "precision": 0.6787,
+      "recall": 0.404,
+      "mAP50": 0.4496,
+      "mAP50_95": 0.2545
+    },
+    "motorcycle": {
+      "precision": 0.6627,
+      "recall": 0.5486,
+      "mAP50": 0.5545,
+      "mAP50_95": 0.3209
+    },
+    "license_plate": {
+      "precision": 0.6413,
+      "recall": 0.5001,
+      "mAP50": 0.5041,
+      "mAP50_95": 0.223
+    },
+    "hardhat": {
+      "precision": 0.8819,
+      "recall": 0.8643,
+      "mAP50": 0.9144,
+      "mAP50_95": 0.6505
+    }
+  },
+  "per_class_eval": {
+    "weights": "helmet_unified.pt",
+    "imgsz": 416,
+    "per_class": {
+      "helmet": {
+        "images": 100,
+        "precision": 0.7015,
+        "recall": 0.5748,
+        "mAP50": 0.6121,
+        "mAP50_95": 0.328
+      },
+      "head": {
+        "images": 98,
+        "precision": 0.8001,
+        "recall": 0.431,
+        "mAP50": 0.5307,
+        "mAP50_95": 0.2986
+      },
+      "motorcycle": {
+        "images": 84,
+        "precision": 0.71,
+        "recall": 0.6319,
+        "mAP50": 0.6711,
+        "mAP50_95": 0.3859
+      },
+      "license_plate": {
+        "images": 103,
+        "precision": 0.6917,
+        "recall": 0.5035,
+        "mAP50": 0.5157,
+        "mAP50_95": 0.2272
+      },
+      "hardhat": {
+        "images": 400,
+        "precision": 0.924,
+        "recall": 0.8494,
+        "mAP50": 0.923,
+        "mAP50_95": 0.6557
+      }
+    },
+    "mAP50": 0.6505,
+    "mAP50_95": 0.3791,
+    "ablation": {
+      "night": 0.4989,
+      "night+enh": 0.4747,
+      "fog": 0.4733,
+      "fog+enh": 0.5908,
+      "blur": 0.5648,
+      "blur+enh": 0.5685
+    }
+  }
+}
